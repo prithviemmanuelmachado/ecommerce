@@ -1,0 +1,1 @@
+[{"cusname":"Prithvi Machado","email":"prithvij1600@gmail.com","username":"prithvi@test.com","password":"test123","is_verified":true,"verification_key":"verificationKeyForSignup","isAdmin":true},{"cusname":"test","email":"prom8273@gmail.com","username":"test","password":"test","is_verified":true,"verification_key":"verificationKeyForSignup","isAdmin":false}]

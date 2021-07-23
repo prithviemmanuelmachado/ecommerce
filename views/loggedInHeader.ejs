@@ -1,0 +1,17 @@
+<div class="header">
+    <h1>E-Commerce Project</h1>
+    <div class="options">
+        <div class="tabs">WELCOME <%= cusname %></div><br><br>
+
+        <div class="tabs"><a href="/changepassword">CHANGE PASSWORD</a></div>
+        <div class="tabs"><a href="<%= link %>"><%= linktext %></a></div>
+        <% if (isAdmin == true) { %>
+            <div class="tabs"><a href="/manageproducts">MANAGE PRODUCTS</a></div>
+        <% } %>
+        <div class="tabs"><a href="/logout">LOGOUT</a></div>
+        
+    </div>
+    
+    
+    
+</div>

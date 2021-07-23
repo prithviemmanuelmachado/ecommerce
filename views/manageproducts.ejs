@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            MANAGE PRODUCTS
+        </title>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <%-include(header)-%>
+        <br><br>
+        <div id="cartcontainer">
+            <% products.forEach(function(product){ %>
+                <br>
+                <div class="cartcards" id="<%= product.id %>">
+                    <img class="cartcardsImage" src="/images/<%= product.image %>"/><br><br>
+                    <h1> TITLE : <%= product.title %> </h1><br><br><br>
+                    <div class="quantity">
+                        <div class="quantitydiv">
+                            <h1>STOCK </h1>: 
+                            <div id="stock"><%= product.stock %></div>
+                            
+                        </div>
+                        <div class="quantitydiv">
+                            <div class="price"><h1>PRICE </h1>: &#8377; <%= product.price %></div>
+                        </div><br><br>
+                        <div class="quantitydiv">
+                            <h1>DESCRIPTION</h1><br> 
+                            <div id="stock"><%= product.description %></div>
+                            
+                        </div><br><br>
+                        <div class="quantitydiv">
+                            <button class="view edit">EDIT</button>
+                        </div>
+                        <div class="quantitydiv">
+                            <button class="view deleteprod">DELETE</button>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </div>
+                <br>
+            <% }) %>
+            <button id="addnewproducts">ADD NEW PRODUCTS</button>
+        </div>
+        
+        
+    </body>
+    <script src="/js/manageproducts.js"></script>
+</html>

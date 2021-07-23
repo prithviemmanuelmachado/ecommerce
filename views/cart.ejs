@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>
+            CART
+        </title>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <%-include(header)-%>
+        <br><br>
+        <h1 style="padding-left: 100px;">MY CART</h1>
+        <div id="cartcontainer">
+            <br>
+            <% products.forEach(function(product){ %>
+                <div class="cartcards" id="<%= product.id %>">
+                    <img class="cartcardsImage" src="/images/<%= product.image %>"/><br><br>
+                    <h1> <%= product.title %> </h1><br><br><br>
+                    <div class="quantity">
+                        <div class="quantitydiv">
+                            QUANTITY : 
+                            <button class="addQuandity quant">+</button>
+                            <div id="quant" class="<%= product.stock %>">1</div>
+                            <button class="decQuandity quant">-</button>
+                        </div>
+                        <div class="quantitydiv">
+                            <div class="price">PRICE : &#8377; <%= product.price %></div>
+                        </div>
+                        <div class="quantitydiv" id="<%= product.id %>">
+                            <button class='view'>VIEW</button>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <br>
+            <% }) %>
+        </div>
+        
+        
+    </body>
+    <script src="/js/cart.js"></script>
+</html>
